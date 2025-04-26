@@ -1,0 +1,42 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "products1",
+            "price": "$125.00",
+            "discount": "50%",
+            "previuse price": "$250.55",
+            "image": "./images/image-product-1.jpg",
+            "thumbnail": "./images/image-product-1-thumbnail.jpg"
+        },
+        {
+            "id": 2,
+            "name": "products2",
+            "price": "$135.00",
+            "discount": "50%",
+            "previuse price": "$230.55",
+            "image": "./images/image-product-2.jpg",
+            "thumbnail": "./images/image-product-2-thumbnail.jpg"
+        },
+        {
+            "id": 3,
+            "name": "products3",
+            "price": "$145.00",
+            "discount": "30%",
+            "previuse price": "$240.55",
+            "image": "./images/image-product-3.jpg",
+            "thumbnail": "./images/image-product-3-thumbnail.jpg"
+        },
+        {
+            "id": 4,
+            "name": "products4",
+            "price": "$120.00",
+            "discount": "20%",
+            "previuse price": "$150.55",
+            "image": "./images/image-product-4.jpg",
+            "thumbnail": "./images/image-product-4-thumbnail.jpg"
+        }
+    ]
+}
+i have this json file, i want to use it for the images in the website (the left side of the iamge)
+i want to display the product image when click the thmbnsil image in react.

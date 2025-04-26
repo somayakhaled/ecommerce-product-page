@@ -1,13 +1,446 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Kumbh Sans';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+ 
+/* vanBar styles */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin: 1.5rem 0 1.5rem 0;
+  border-bottom: 1px solid hsl(223, 64%, 98%);
+  height: 90px;
+  width: 100%;
+}
+
+nav .leftSide{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  height: 100%;
+}
+
+nav .leftSide ul{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+nav .leftSide ul a{
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  height: 98%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+nav .leftSide ul a:hover{ 
+  color: hsl(220, 13%, 13%);
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+
+nav .rightSide{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+nav .rightSide .avatar{
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+}
+
+nav .rightSide button{
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+}
+
+nav .rightSide button:hover{
+  cursor: pointer;
+}
+
+nav .rightSide button:hover .cart path{
+  fill: hsl(220, 13%, 13%);
+}
+
+nav .rightSide .avatar:hover{
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*cart styles*/
+.cart-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  width: 350px;
+  min-height: 250px;
+  margin-top: 230%;
+  margin-left: -120%;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cart-container .header{
+  padding: 1rem;
+  border-bottom: 1px solid hsl(223, 64%, 98%);
+  font-weight: 700;
+}
+
+.cart-container .cart-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 197px;
+}
+
+.cart-container .cart-body h4{
+  font-weight: 500;
+  color: hsl(219, 9%, 45%);
+}
+
+/*Home*/
+.main-container{
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.main-container .left-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-container .left-container .selected-image img{
+  width: 360px;
+  height: 380px;
+  border-radius: 8px;
+}
+
+.main-container .left-container .thumbnails{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main-container .left-container .thumbnails .thumbnail-wrapper{
+  width: 70px;
+  height: 70px; 
+}
+
+.main-container .left-container .thumbnails .thumbnail-wrapper img{
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.main-container .left-container .thumbnails .thumbnail-wrapper:hover{
+  opacity : .5;
+  cursor: pointer;
+}
+
+.selected{
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 8px;
+}
+
+.main-container .right-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+.main-container .right-container h4{
+  color: hsl(219, 9%, 45%);
+  text-transform: uppercase;
+}
+
+.main-container .right-container h1, h2{
+  color: hsl(220, 13%, 13%);
+}
+
+.main-container .right-container h1{
+  font-size: 3rem;
+}
+
+.main-container .right-container p{
+  color: hsl(219, 9%, 45%);
+}
+
+.main-container .right-container .price-info{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
+}
+
+.main-container .right-container .price-info .price-and-discount{
+  display: flex;
+  gap: 1rem;
+}
+
+.main-container .right-container .price-info .price-and-discount .discount{
+ background-color: hsl(220, 13%, 13%);
+ color: white;
+ padding: .1rem .4rem; 
+ border-radius: 5px;
+ font-weight: 500;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.main-container .right-container .price-info .prev-price{
+  font-weight: 600;
+  color: hsl(219, 9%, 45%);
+  text-decoration: line-through;
+}
+
+.main-container .right-container .quntity-addToCart{
+  display: flex;
+  gap: .5rem;
+}
+
+.main-container .right-container .quntity-addToCart button{
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 8px;
+  padding: .8rem 4rem;
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container .right-container .quntity-addToCart button h3{
+  font-weight: 600;
+  color: hsl(220, 13%, 13%);
+}
+
+.main-container .right-container .quntity-addToCart button:hover{
+background-color: hsla(26, 100%, 55%, 0.7);
+cursor: pointer;
+}
+
+.main-container .right-container .quntity-addToCart .quantity{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 8px;
+  padding: .5rem;
+}
+
+.main-container .right-container .quntity-addToCart .quantity .minus, .plus:hover{
+  cursor: pointer;
+}
+
+/*gallery*/
+
+.gallery-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -139px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: .8rem;
+}
+
+.gallery .close{
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50px);
+}
+
+.gallery .close:hover  svg path{
+  fill: hsl(26, 100%, 55%);
+  cursor: pointer;
+}
+
+.gallery .images{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.images .selected-image{
+  display: flex;
+  align-items: center;
+}
+
+.images .selected-image img{
+  width: 400px;
+  height: 420px;
+  border-radius: 8px;
+}
+
+.selected-image .next, .previous{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.selected-image .previous:hover svg path{
+  stroke: hsl(26, 100%, 55%);
+}
+
+.selected-image .previous:hover{
+  cursor: pointer;
+}
+
+.selected-image .previous{
+  transform: translateX(25px);
+}
+
+.selected-image .previous svg{
+  transform: translateX(-2px);
+}
+
+.selected-image .next:hover svg path{
+  stroke: hsl(26, 100%, 55%);
+}
+
+.selected-image .next:hover{
+  cursor: pointer;
+}
+
+.selected-image .next{
+  transform: translateX(-25px);
+}
+
+.selected-image .next svg{
+  transform: translateX(2px);
+}
+
+.gallery .images .thumbnails{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gallery .images .thumbnails .thumbnail-wrapper{
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.gallery .images .thumbnails .thumbnail-wrapper:hover{
+  opacity: .5;
+  cursor: pointer;
+}
+
+.gallery .images .thumbnails img{
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+/*cart conteant*/
+.content-container{
+  display: flex;
+  flex-direction : column;
+  gap: 1rem;
+}
+
+.content-container .added-product{
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.added-product .product-img{
+  display: flex;
+}
+
+.added-product .product-img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.added-product .product-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  color: hsl(219, 9%, 45%);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.product-info .product-price-info{
+  display: flex;
+  gap: .5rem;
+}
+
+.product-price-info .total-price{
+  color: hsl(220, 13%, 13%);
+}
+
+.added-product button:hover svg path{
+  cursor: pointer;
+  fill: rgb(255, 50, 50);
+}
+
+.content-container .checkout{
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(220, 13%, 13%);
+  font-weight: 700;
+  padding: .8rem;
+  border-radius: 8px;
+}
+
+.content-container .checkout:hover{
+  background-color: hsla(26, 100%, 55%, 0.7);
+  cursor: pointer;
 }
