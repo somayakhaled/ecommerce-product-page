@@ -119,11 +119,11 @@ const Home = () => {
                 <div className="quntity-addToCart">
                     <div className="quantity">
                         <span onClick={decrease} className="minus">
-                            <img src="./images/icon-minus.svg" alt="minus" />
+                            <img src="/images/icon-minus.svg" alt="minus" />
                         </span>
                         <span>{quantity}</span>
                         <span onClick={increase} className="plus">
-                            <img src={require('./images/icon-plus.svg').default} alt="plus" />
+                            <img src="/images/icon-plus.svg" alt="plus" />
                         </span>
                     </div>
 
