@@ -123,7 +123,7 @@ const Home = () => {
                         </span>
                         <span>{quantity}</span>
                         <span onClick={increase} className="plus">
-                            <img src="./images/icon-plus.svg" alt="plus" />
+                            <img src={require('./images/icon-plus.svg').default} alt="plus" />
                         </span>
                     </div>
 
