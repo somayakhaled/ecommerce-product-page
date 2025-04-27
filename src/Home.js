@@ -7,26 +7,26 @@ const productData = {
         {  
             id: 1,  
             name: "products1",  
-            image: "./images/image-product-1.jpg",  
-            thumbnail: "./images/image-product-1-thumbnail.jpg"  
+            image: "/images/image-product-1.jpg",  
+            thumbnail: "/images/image-product-1-thumbnail.jpg"  
         },  
         {  
             id: 2,  
             name: "products2",   
-            image: "./images/image-product-2.jpg",  
-            thumbnail: "./images/image-product-2-thumbnail.jpg"  
+            image: "/images/image-product-2.jpg",  
+            thumbnail: "/images/image-product-2-thumbnail.jpg"  
         },  
         {  
             id: 3,  
             name: "products3",   
-            image: "./images/image-product-3.jpg",  
-            thumbnail: "./images/image-product-3-thumbnail.jpg"  
+            image: "/images/image-product-3.jpg",  
+            thumbnail: "/images/image-product-3-thumbnail.jpg"  
         },  
         {  
             id: 4,  
             name: "products4", 
-            image: "./images/image-product-4.jpg",  
-            thumbnail: "./images/image-product-4-thumbnail.jpg"  
+            image: "/images/image-product-4.jpg",  
+            thumbnail: "/images/image-product-4-thumbnail.jpg"  
         }  
     ]  
 };  
@@ -46,7 +46,7 @@ const Home = () => {
             id: 1,
             name: "Fall Limited Edition Sneakers",
             price: 125.00,
-            thumbnail: "./images/image-product-1-thumbnail.jpg"
+            thumbnail: "/images/image-product-1-thumbnail.jpg"
         };
         
         addToCart(product, quantity);
